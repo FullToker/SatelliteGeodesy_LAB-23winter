@@ -12,8 +12,8 @@
 \author{Group6: Zhengyang Hua, Xipeng Li, Yushuo Feng}
 \date{\today}
 
-\begin{document}
 
+\begin{document}
 \maketitle
 
 \section{Introduction}
@@ -85,10 +85,23 @@ $$R_2(\delta)=\begin{pmatrix}\cos\delta&0&-\sin\delta\\0&1&0\\\sin\delta&0&\cos\
 
 Transformation of coordinates:
 $$\left.\begin{pmatrix}x_{up}\\x_{east}\\x_{north}\end{pmatrix}=R_2(-\varphi^0)R_3(\lambda^0)\left(\begin{pmatrix}x_1\\x_2\\x_3\end{pmatrix}\right.-\begin{pmatrix}x_1^0\\x_2^0\\x_3^0\end{pmatrix}\right)$$
-Velocities:
+$x^0$are the stations' geodetic coordinates, and $x$ is observations in file '.xyz'.
+Notice that we also can directly use the longitude and latitude of stations provided in the file "Discontinuities\_CONFIRMED.snx".
+
+In terms of velocity, its transformation into LHS only requires multiplication by a rotation matrix.
 \subsection{Least Square Adjustment for Parameters Estimation}
+For time series, $$ y(t)=\beta_{1}+\beta_{2}t+\beta_{3}\mathrm{cos}\omega t+\beta_{4}\mathrm{sin}\omega t $$
+among which $\beta_3$ and $\beta_4$ are total amplitude of annual, and $\beta_2$ is linear trend; so we can build model like:
+$$\begin{pmatrix}y(t_1)\\\vdots\\y(t_n)\end{pmatrix}=\begin{pmatrix}1&t_1&\cos\omega t_1&\sin\omega t_1\\\vdots&\vdots&\vdots&\vdots\\1&t_n&\cos\omega t_n&\sin\omega t_n\end{pmatrix}\begin{pmatrix}\beta_1\\\beta_2\\\beta_3\\\beta_4\end{pmatrix}$$
+We can simppfit the model like: $$Y=X\beta+\varepsilon$$
+where $Y$ is the observations, $X$ is the design matrix, $\beta$ is the parameters, and $\varepsilon$ is the noise.
+
+According to least square, minimize the noise, 
+derivative the square of noise and set it to zero so we get:
+$$\beta=(X^TX)^{-1}X^TY$$ through this we can get the estimated parameters.
 
 \subsection{Model of Plate Tectonics}
+
 
 \subsection{Program Description}
 
