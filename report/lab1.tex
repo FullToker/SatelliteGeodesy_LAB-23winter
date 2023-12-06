@@ -78,7 +78,8 @@ In this project, we use two angles and the ITRF2008 point positions as the origi
 
 Calculate the angle according to stations' geodetic coordinates:
 
-$$\lambda=\arctan\frac{y}{x}$$, $$\varphi=\arctan\frac{2}{\sqrt{x^{2}+y^{2}}}$$
+$$\lambda=\arctan\frac{y}{x}$$ 
+$$\varphi=\arctan\frac{2}{\sqrt{x^{2}+y^{2}}}$$
 
 Then we can get the rotation matrix:
 $$R_2(\delta)=\begin{pmatrix}\cos\delta&0&-\sin\delta\\0&1&0\\\sin\delta&0&\cos\delta\end{pmatrix}\quad R_3(\delta)= \begin{pmatrix}\cos\delta&\sin\delta&0\\-\sin\delta&\cos\delta&0\\0&0&1\end{pmatrix}$$
