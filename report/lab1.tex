@@ -66,7 +66,7 @@ and in that row, the angular velocity changes in three directions are provided (
 
 \section{Methodology}
 \subsection{Transoformation to LHS}
-[Geocentric cartesian coordinate system] A three-dimensional, earth-centered reference system in which locations are identified by their x, y, and z values. 
+[Geocentric cartesian coordinate system] is a three-dimensional, earth-centered reference system in which locations are identified by their x, y, and z values. 
 The x-axis is in the equatorial plane and intersects the prime meridian (usually Greenwich). 
 The y-axis is also in the equatorial plane; it lies at right angles to the x-axis and intersects the 90-degree meridian. 
 The z-axis coincides with the polar axis and is positive toward the north pole. The origin is located at the center of the sphere or spheroid.
@@ -101,7 +101,10 @@ derivative the square of noise and set it to zero so we get:
 $$\beta=(X^TX)^{-1}X^TY$$ through this we can get the estimated parameters.
 
 \subsection{Model of Plate Tectonics}
-
+The movement of any plate on a spherical Earth can be described through a rotation around the Euler pole:
+$$\underline{\Omega}=(\Omega_{1},\Omega_{2},\Omega_{3})^{T}$$
+In point $\underline{x}_{0}=(x,y,z)^{T}$ the velocity vector v is obtained by:
+$$\underline{v}=\underline{\Omega}\times\underline{x}_0=\begin{pmatrix}0&&-\Omega_z&&\Omega_y\\\Omega_z&&0&&-\Omega_x\\-\Omega_y&&\Omega_x&&0\end{pmatrix}\begin{pmatrix}x\\y\\z\end{pmatrix}$$
 
 \subsection{Program Description}
 
