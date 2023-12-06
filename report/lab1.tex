@@ -1,0 +1,108 @@
+\documentclass{article}
+\newcommand{\upcite}[1]{\textsuperscript{\textsuperscript{\cite{#1}}}}
+
+% Packages
+\usepackage{titlesec}
+\usepackage{indentfirst}
+\usepackage{amsmath, amsthm, amssymb, graphicx}
+\usepackage{graphicx}
+
+% Title
+\title{Satellite Lab1}
+\author{Group6: Zhengyang Hua, Xipeng Li, Yushuo Feng}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+
+\section{Orignal Data}
+\subsection{ITRF2008 IGS station}
+The ITRF is The International Reference Frame, 
+ITRF2008 is the new realization of the International Terrestrial Reference System. 
+The ITRF2008 uses as input data time series of station positions and EOPs provided by the Technique Centers of the four space geodetic techniques (GPS, VLBI, SLR, DORIS). 
+Based on completely reprocessed solutions of the four techniques, the ITRF2008 is expected to be an improved solution compared to ITF2005\upcite{ref1}.
+
+In the file "ITRF2008\_GNSS.SSC.txt", we can find the coordinates of different stations at epoch 2005.0.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=12cm]{./source/ITRF2008.png}
+    \caption{ITRF2008\_GNSS.ssc.txt Description}
+    \label{fig:ITRF2008}
+\end{figure}
+
+Time state: ?
+\subsection{Station Obversations}
+We were responsible for the computation of the positions and movements of three measurement stations: KIRU, MORP, and REYK. The locations are illustrated in the following figure:
+
+An example of the observation file for each data set is provided below, including two time formats and XYZ coordinates.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=12cm]{./source/xyz.png}
+    \caption{station.xyz.txt Description}
+    \label{fig:XYZ_obs}
+\end{figure}
+\subsection{NUVEL 1A Model}
+NUVEL(Northeast University Velocity) is a the collective term for geophysical Earth models that describes observable
+continental movements through a dynamic theory of plaet tectonics.
+
+The "NNR\_NUVEL1A.txt" gives the rotation referred to epoch $t_0$. 
+The file contains the following data, where the leftmost column represents the station name, 
+and in that row, the angular velocity changes in three directions are provided (unit: radians per million years or $rad/My$).
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=12cm]{./source/xyz.png}
+    \caption{NUVEL\-1A.txt Description}
+    \label{fig:Nuvel-1A}
+\end{figure}
+\subsection{GIA Models}
+
+\subsection{Other data}
+
+\subsection{Matlab Code}
+
+\section{Methodology}
+\subsection{Transoformation to LHS}
+[Geocentric cartesian coordinate system] A three-dimensional, earth-centered reference system in which locations are identified by their x, y, and z values. 
+The x-axis is in the equatorial plane and intersects the prime meridian (usually Greenwich). 
+The y-axis is also in the equatorial plane; it lies at right angles to the x-axis and intersects the 90-degree meridian. 
+The z-axis coincides with the polar axis and is positive toward the north pole. The origin is located at the center of the sphere or spheroid.
+
+[Local horizontal system] uses the Cartesian coordinates(East,Nort,Up) to represent position relative to a local origin. The local origin is described by the geodetic coordinates.
+
+The initial coordinates are in the geocentric Cartesian coordinate system and need to be transformed into representation in the local horizontal coordinate system.
+In this project, we use two angles and the ITRF2008 point positions as the original point, 
+
+Calculate the angle according to stations' geodetic coordinates:
+
+$$\lambda=\arctan\frac{y}{x}$$, $$\varphi=\arctan\frac{2}{\sqrt{x^{2}+y^{2}}}$$
+
+Then we can get the rotation matrix:
+$$R_2(\delta)=\begin{pmatrix}\cos\delta&0&-\sin\delta\\0&1&0\\\sin\delta&0&\cos\delta\end{pmatrix}\quad R_3(\delta)= \begin{pmatrix}\cos\delta&\sin\delta&0\\-\sin\delta&\cos\delta&0\\0&0&1\end{pmatrix}$$
+
+Transformation of coordinates:
+$$\left.\begin{pmatrix}x_{up}\\x_{east}\\x_{north}\end{pmatrix}=R_2(-\varphi^0)R_3(\lambda^0)\left(\begin{pmatrix}x_1\\x_2\\x_3\end{pmatrix}\right.-\begin{pmatrix}x_1^0\\x_2^0\\x_3^0\end{pmatrix}\right)$$
+Velocities:
+\subsection{Least Square Adjustment for Parameters Estimation}
+
+\subsection{Model of Plate Tectonics}
+
+\subsection{Program Description}
+
+\section{Results and Analysis}
+\subsection{Time Series and Linear Trend}
+
+\subsection{Comparison of horizontal movements}
+
+\subsection{Comparison of vertical movements}
+
+\section{Conclusion}
+\begin{thebibliography}{99}
+    \bibitem{ref1}https://itrf.ign.fr/en/solutions/ITRF2008
+    
+\end{thebibliography}
+
+\end{document}
