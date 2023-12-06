@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.12.4)  6 DEC 2023 16:15
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.12.4)  6 DEC 2023 21:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -177,19 +177,19 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 File: ./source/ITRF2008.png Graphic file (type bmp)
 <./source/ITRF2008.png>
+File: ./source/xyz.png Graphic file (type bmp)
+<./source/xyz.png>
  [1
 
 ]
 File: ./source/xyz.png Graphic file (type bmp)
 <./source/xyz.png>
-File: ./source/xyz.png Graphic file (type bmp)
-<./source/xyz.png>
- [2]
-Overfull \hbox (7.10202pt too wide) in paragraph at lines 69--73
+
+Overfull \hbox (7.10202pt too wide) in paragraph at lines 67--71
 []\TU/lmr/m/n/10 [Geocentric cartesian coordinate system] is a three-dimensional, earth-centered
  []
 
-[3] [4] [5] (./lab1.aux) ) 
+[2] [3] [4] [5] (./lab1.aux) ) 
 Here is how much of TeX's memory you used:
  2646 strings out of 476683
  40013 string characters out of 5804047
