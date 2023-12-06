@@ -69,7 +69,7 @@ def dms_to_ra(degrees, minutes, seconds):
 
 # calculate the rotation matrix
 def cal_Rota(angle:float,flag:int):
-    ro=np.eye(3);
+    ro=np.eye(3)
     ra=angle
     if flag==2:
         ro[0][0]=math.cos(ra)
