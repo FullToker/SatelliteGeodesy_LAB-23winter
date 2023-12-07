@@ -6,6 +6,8 @@
 \usepackage{graphicx}
 \usepackage[pages=-]{background}
 \usepackage{xcolor}
+\usepackage{caption}
+\usepackage{booktabs}
 
 \backgroundsetup{
   scale=1,
@@ -138,6 +140,43 @@ $$\underline{v}=\underline{\Omega}\times\underline{x}_0=\begin{pmatrix}0&&-\Omeg
 
 \section{Results and Analysis}
 \subsection{Time Series and Linear Trend}
+Through the least square adjustment, out group get the time series of these three stations as shown below:
+And we can see that the linear trend of KIRU in Up, East and North directions are , , and respectively.
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=10cm]{./source/ITRF2008.png}
+  \captionsetup{skip=0.2cm}
+  \caption{Time Series of KIRU}
+  \label{fig:Ori_KIRU}
+\end{figure}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=10cm]{./source/ITRF2008.png}
+  \caption{Time Series of MORP}
+  \label{fig:Ori_MORP}
+\end{figure}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=10cm]{./source/ITRF2008.png}
+  \caption{Time Series of REYK}
+  \label{fig:Ori_REYK}
+\end{figure}
+
+\begin{table}[htbp]
+  \centering
+  \caption{Linear Trend of Time Series}
+    \begin{tabular}{lrrr}
+    \large Station & \multicolumn{3}{c}{\large Linear Trend(mm/y)} \\
+    \midrule
+          & \multicolumn{1}{l}{\large UP} & \multicolumn{1}{l}{\large EAST} & \multicolumn{1}{l}{\large NORTH} \\
+          
+     KIRU  &       &       &  \\[3pt]
+     MORP  &       &       &  \\[3pt]
+     REYK  &       &       &  \\
+    \end{tabular}%
+  \label{Tab:lin_trend}%
+\end{table}%
+
 
 \subsection{Comparison of horizontal movements}
 
