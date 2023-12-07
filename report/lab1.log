@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.12.4)  7 DEC 2023 18:32
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.12.4)  7 DEC 2023 19:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -410,8 +410,6 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 File: ./source/ITRF2008.png Graphic file (type bmp)
 <./source/ITRF2008.png>
-File: ./source/xyz.png Graphic file (type bmp)
-<./source/xyz.png>
 File: ../source/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
 <use ../source/Universitaet_Logo_RGB.pdf>
  [1
@@ -419,19 +417,22 @@ File: ../source/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
 ]
 File: ./source/xyz.png Graphic file (type bmp)
 <./source/xyz.png>
-
-Overfull \hbox (7.10202pt too wide) in paragraph at lines 81--85
+File: ../source/dis.png Graphic file (type bmp)
+<../source/dis.png>
+File: ../source/nuvel.png Graphic file (type bmp)
+<../source/nuvel.png>
+File: ../source/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
+<use ../source/Universitaet_Logo_RGB.pdf>
+ [2]
+Overfull \hbox (7.10202pt too wide) in paragraph at lines 90--94
 []\TU/lmr/m/n/10 [Geocentric cartesian coordinate system] is a three-dimensional, earth-centered
  []
 
-File: ../source/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
-<use ../source/Universitaet_Logo_RGB.pdf>
-[2]
 File: ../source/transform.png Graphic file (type bmp)
 <../source/transform.png>
 File: ../source/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
 <use ../source/Universitaet_Logo_RGB.pdf>
- [3]
+[3]
 File: ../source/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
 <use ../source/Universitaet_Logo_RGB.pdf>
  [4]
@@ -439,12 +440,12 @@ File: ../source/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
 <use ../source/Universitaet_Logo_RGB.pdf>
  [5] (./lab1.aux) ) 
 Here is how much of TeX's memory you used:
- 13568 strings out of 476683
- 275669 string characters out of 5804047
- 1859018 words of memory out of 5000000
- 33564 multiletter control sequences out of 15000+600000
+ 13585 strings out of 476683
+ 276020 string characters out of 5804047
+ 1855018 words of memory out of 5000000
+ 33579 multiletter control sequences out of 15000+600000
  518679 words of font info for 64 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 99i,13n,103p,468b,728s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,13n,103p,468b,730s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on lab1.pdf (5 pages).

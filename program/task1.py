@@ -261,8 +261,12 @@ new_lhs_kiru_north, kiru_Nbeta=cal_para(coors_lhs_kiru,new_kiru_t,0)
 new_lhs_kiru_east, kiru_Ebeta=cal_para(coors_lhs_kiru,new_kiru_t,1)
 new_lhs_kiru_h, kiru_Hbeta=cal_para(coors_lhs_kiru,new_kiru_t,2)
 
-print("parameter is :")
+print("North parameter is :")
 print(kiru_Nbeta)
+print("East parameter is :")
+print(kiru_Ebeta)
+print("Height parameter is :")
+print(kiru_Hbeta)
 
 
 fig, (ax1, ax2, ax3) = plt.subplots(3, 1, sharex=True, figsize=(8, 10))

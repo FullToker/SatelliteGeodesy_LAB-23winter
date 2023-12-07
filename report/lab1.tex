@@ -39,7 +39,7 @@ and ITRF2008 is a realization of the International Terrestrial Reference System
 that uses as input data time series of station positions and EOPs provided by the Technique Centers of the four space geodetic techniques (GPS, VLBI, SLR, DORIS).
 
 In the file "ITRF2008\_GNSS.SSC.txt", we can find the coordinates of different stations at epoch 2005.0.
- and Time state:
+ and Time is given as the yyyy.yyyy format, which is the number of decimal years:
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=12cm]{./source/ITRF2008.png}
@@ -57,6 +57,15 @@ An example of the observation file for each data set is provided below, includin
     \label{fig:XYZ_obs}
 \end{figure}
 
+And the file Discontinuities\_snx provides the discontinuity information in the positions' time series. The reasons for that include change of antenna and receiver, earthquake and so on.
+In this example(station: REYK), the discontinuity happened three times due to earthquake, antenna change and unknown reason.
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=12cm]{../source/dis.png}
+  \caption{Discontinuities in time series}
+  \label{fig:Dis_snx}
+\end{figure}
+
 \subsection{NUVEL 1A Model}
 NUVEL(Northeast University Velocity) is a the collective term for geophysical Earth models that describes observable
 continental movements through a dynamic theory of plaet tectonics.
@@ -66,7 +75,7 @@ The file contains the following data, where the leftmost column represents the s
 and in that row, the angular velocity changes in three directions are provided (unit: radians per million years or $rad/My$).
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=12cm]{./source/xyz.png}
+    \includegraphics[width=12cm]{../source/nuvel.png}
     \caption{NUVEL\_1A.txt Description}
     \label{fig:Nuvel-1A}
 \end{figure}
