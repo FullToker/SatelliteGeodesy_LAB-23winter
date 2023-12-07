@@ -141,27 +141,27 @@ $$\underline{v}=\underline{\Omega}\times\underline{x}_0=\begin{pmatrix}0&&-\Omeg
 \section{Results and Analysis}
 \subsection{Time Series and Linear Trend}
 Through the least square adjustment, out group get the time series of these three stations as shown below:
-And we can see that the linear trend of KIRU in Up, East and North directions are , , and respectively.
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=10cm]{./source/ITRF2008.png}
+  \includegraphics[width=10cm]{../source/ITRF2008.png}
   \captionsetup{skip=0.2cm}
   \caption{Time Series of KIRU}
   \label{fig:Ori_KIRU}
 \end{figure}
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=10cm]{./source/ITRF2008.png}
+  \includegraphics[width=10cm]{../source/ITRF2008.png}
   \caption{Time Series of MORP}
   \label{fig:Ori_MORP}
 \end{figure}
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=10cm]{./source/ITRF2008.png}
+  \includegraphics[width=10cm]{../source/ITRF2008.png}
   \caption{Time Series of REYK}
   \label{fig:Ori_REYK}
 \end{figure}
 
+And we can see that the linear trend of KIRU in Up, East and North directions are , , and respectively.
 \begin{table}[htbp]
   \centering
   \caption{Linear Trend of Time Series}
@@ -175,8 +175,34 @@ And we can see that the linear trend of KIRU in Up, East and North directions ar
      REYK  &       &       &  \\
     \end{tabular}%
   \label{Tab:lin_trend}%
-\end{table}%
+\end{table}
 
+After we minus the linear trend, out group get the residual time series of these three stations as below 
+and the specific vaules are shown in the table 2.
+\vspace{30pt}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[height=7cm]{../source/nuvel.png}
+  \captionsetup{skip=0.2cm}
+  \caption{Residual Time Series of KIRU}
+  \label{fig:Res_KIRU}
+\end{figure}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[height=7cm]{../source/nuvel.png}
+  \caption{Residual Time Series of MORP}
+  \label{fig:Res_MORP}
+\end{figure}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[height=7cm]{../source/nuvel.png}
+  \caption{Residual Time Series of REYK}
+  \label{fig:Res_REYK}
+\end{figure}
+When we removing the linear trend, our group also remove the constant term in the model, 
+so that we can see more clearly about the residaul values.
+After doing this, we can see residual value in millimeter in three directions of three stations.
+And obvisously, the residual values of UP direction are much larger than the other two directions.
 
 \subsection{Comparison of horizontal movements}
 
