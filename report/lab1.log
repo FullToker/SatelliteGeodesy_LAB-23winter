@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.12.4)  7 DEC 2023 22:09
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.12.4)  7 DEC 2023 22:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -499,11 +499,7 @@ File: ../source/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
  [8]
 File: ../source/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
 <use ../source/Universitaet_Logo_RGB.pdf>
- [9] (./lab1.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+ [9] (./lab1.aux) ) 
 Here is how much of TeX's memory you used:
  15048 strings out of 476683
  304148 string characters out of 5804047
