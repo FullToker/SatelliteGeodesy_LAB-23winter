@@ -199,7 +199,10 @@ coors_lhs_kiru=trans2LHS(sta_itrf,sta_llh,sta_name,0,kiru_t,kiru_coors)
 coors_lhs_morp=trans2LHS(sta_itrf,sta_llh,sta_name,1,morp_t,morp_coors)
 coors_lhs_reyk=trans2LHS(sta_itrf,sta_llh,sta_name,2,reyk_t,reyk_coors)
 
-print(float(coors_lhs_kiru[0][1]))
+print("kiru xyz coors:")
+print(kiru_coors[0])
+print("kiru lhs coors:")
+print(coors_lhs_kiru[0])
 
 
 #间接平差
