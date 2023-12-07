@@ -1,11 +1,23 @@
 \documentclass{article}
-\newcommand{\upcite}[1]{\textsuperscript{\textsuperscript{\cite{#1}}}}
-
 % Packages
 \usepackage{titlesec}
 \usepackage{indentfirst}
 \usepackage{amsmath, amsthm, amssymb, graphicx}
 \usepackage{graphicx}
+\usepackage[pages=-]{background}
+
+\backgroundsetup{
+  scale=1,
+  angle=0,
+  opacity=1,
+  color=black,
+  position=current page.north east,
+  vshift=-3cm,
+  hshift=-3cm,
+  contents={
+    \includegraphics[width=2cm]{../source/Universitaet_Logo_RGB.pdf}
+  }
+}
 
 % Title
 \title{Satellite Lab1}
@@ -14,6 +26,7 @@
 
 
 \begin{document}
+
 \maketitle
 
 \section{Introduction}
@@ -23,7 +36,7 @@
 \subsection{ITRF2008 IGS station}
 The ITRF is The International Reference Frame,  
 and ITRF2008 is a realization of the International Terrestrial Reference System 
-that uses as input data time series of station positions and EOPs provided by the Technique Centers of the four space geodetic techniques (GPS, VLBI, SLR, DORIS)\upcite{ref1}.
+that uses as input data time series of station positions and EOPs provided by the Technique Centers of the four space geodetic techniques (GPS, VLBI, SLR, DORIS).
 
 In the file "ITRF2008\_GNSS.SSC.txt", we can find the coordinates of different stations at epoch 2005.0.
  and Time state:
@@ -43,6 +56,7 @@ An example of the observation file for each data set is provided below, includin
     \caption{station.xyz Description}
     \label{fig:XYZ_obs}
 \end{figure}
+
 \subsection{NUVEL 1A Model}
 NUVEL(Northeast University Velocity) is a the collective term for geophysical Earth models that describes observable
 continental movements through a dynamic theory of plaet tectonics.
@@ -115,9 +129,5 @@ $$\underline{v}=\underline{\Omega}\times\underline{x}_0=\begin{pmatrix}0&&-\Omeg
 \subsection{Comparison of vertical movements}
 
 \section{Conclusion}
-\begin{thebibliography}{99}
-    \bibitem{ref1}https://itrf.ign.fr/en/solutions/ITRF2008
-    
-\end{thebibliography}
 
 \end{document}
