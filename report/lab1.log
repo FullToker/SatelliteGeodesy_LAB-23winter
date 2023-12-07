@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.12.4)  7 DEC 2023 22:47
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.12.4)  7 DEC 2023 23:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -461,15 +461,15 @@ File: ../source/nuvel.png Graphic file (type bmp)
 File: ../source/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
 <use ../source/Universitaet_Logo_RGB.pdf>
  [2]
-Overfull \hbox (7.10202pt too wide) in paragraph at lines 92--96
+Overfull \hbox (7.10202pt too wide) in paragraph at lines 95--99
 []\TU/lmr/m/n/10 [Geocentric cartesian coordinate system] is a three-dimensional, earth-centered
  []
 
-File: ../source/transform.png Graphic file (type bmp)
-<../source/transform.png>
 File: ../source/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
 <use ../source/Universitaet_Logo_RGB.pdf>
 [3]
+File: ../source/transform.png Graphic file (type bmp)
+<../source/transform.png>
 File: ../source/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
 <use ../source/Universitaet_Logo_RGB.pdf>
  [4]
