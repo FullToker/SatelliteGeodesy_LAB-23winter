@@ -257,9 +257,9 @@ def cal_para(lhs:list,_t:list,flag:int):
 
 
 new_kiru_t=mjd2year(kiru_t)
-new_lhs_kiru_north, kiru_Nbeta=cal_para(coors_lhs_kiru,new_kiru_t,0)
+new_lhs_kiru_north, kiru_Nbeta=cal_para(coors_lhs_kiru,new_kiru_t,2)
 new_lhs_kiru_east, kiru_Ebeta=cal_para(coors_lhs_kiru,new_kiru_t,1)
-new_lhs_kiru_h, kiru_Hbeta=cal_para(coors_lhs_kiru,new_kiru_t,2)
+new_lhs_kiru_h, kiru_Hbeta=cal_para(coors_lhs_kiru,new_kiru_t,0)
 
 print("North parameter is :")
 print(kiru_Nbeta)
