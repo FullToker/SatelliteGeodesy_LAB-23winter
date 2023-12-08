@@ -164,7 +164,7 @@ Through the least square adjustment, out group get the time series of these thre
   \label{fig:Ori_REYK}
 \end{figure}
 
-And we can see that the linear trend of KIRU in Up, East and North directions are , , and respectively.
+And we can see that the linear trend (millimeter) of KIRU in Up, East and North directions are , , and respectively.
 \begin{table}[htbp]
   \centering
   \caption{Linear Trend of Time Series}
@@ -181,8 +181,14 @@ And we can see that the linear trend of KIRU in Up, East and North directions ar
 \end{table}
 
 After we minus the linear trend, out group get the residual time series of these three stations as below 
-and the specific vaules are shown in the table 2.
+and the specific vaules are shown in the table 1. 
+At the same time, table 2 shows the total amplitude of non-linear trend (millimeter per year) which can be computed by $\sqrt{\beta_3^2+\beta_4^2}$.
 \vspace{30pt}
+
+
+When we removing the linear trend, our group also remove the constant term in the model($\beta_1 + \beta_2 t$), 
+so that we can see more clearly about the residaul values.
+After doing this, we can see residual value in millimeter in three directions of three stations.
 \begin{figure}[htbp]
   \centering
   \includegraphics[height=7cm]{../source/nuvel.png}
@@ -202,9 +208,6 @@ and the specific vaules are shown in the table 2.
   \caption{Residual Time Series of REYK}
   \label{fig:Res_REYK}
 \end{figure}
-When we removing the linear trend, our group also remove the constant term in the model, 
-so that we can see more clearly about the residaul values.
-After doing this, we can see residual value in millimeter in three directions of three stations.
 
 And obvisously, the residual values of UP direction are much larger than the other two directions, which also are predominant in total residual values.
 
