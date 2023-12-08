@@ -8,6 +8,10 @@
 \usepackage{xcolor}
 \usepackage{caption}
 \usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{bookmark}
+\usepackage[left=25mm, right=25mm, bottom=35mm]{geometry}
+\usepackage{float}
 
 \backgroundsetup{
   scale=1,
@@ -30,9 +34,19 @@
 \begin{document}
 
 \maketitle
+\tableofcontents
 
 \section{Introduction}
-
+This lab focuses on the geometry and kinematics of the polar region. 
+And our group use the IGS products(station positions) to estimate the time series, horizontal and vertical velocities of three stations: KIRU, MORP, and REYK, whose locations are shown in the following figure:
+In the final part, we compare these result with the plate tectonics model NUVEL 1A and GIA models.
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=8cm]{../result/point/Point.jpg}
+  \captionsetup{skip=0.2cm}
+  \caption{Station Positions}
+  \label{Intro:station}
+\end{figure}
 
 \section{Data Description}
 \subsection{ITRF2008 IGS station}
@@ -44,7 +58,7 @@ In the file "ITRF2008\_GNSS.SSC.txt", we can find the coordinates of different s
  and Time is given as the yyyy.yyyy format, which is the number of decimal years:
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=12cm]{./source/ITRF2008.png}
+    \includegraphics[width=11cm]{./source/ITRF2008.png}
     \caption{ITRF2008\_GNSS.ssc.txt Description}
     \label{fig:ITRF2008}
 \end{figure}
@@ -63,7 +77,7 @@ And the file Discontinuities\_snx provides the discontinuity information in the 
 In this example(station: REYK), the discontinuity happened three times due to earthquake, antenna change and unknown reason.
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=12cm]{../source/dis.png}
+  \includegraphics[width=9cm]{../source/dis.png}
   \caption{Discontinuities in time series}
   \label{fig:Dis_snx}
 \end{figure}
@@ -77,7 +91,7 @@ The file contains the following data, where the leftmost column represents the s
 and in that row, the angular velocity changes in three directions are provided (unit: radians per million years or $rad/My$).
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=12cm]{../source/nuvel.png}
+    \includegraphics[width=9cm]{../source/nuvel.png}
     \caption{NUVEL\_1A.txt Description}
     \label{fig:Nuvel-1A}
 \end{figure}
@@ -118,6 +132,7 @@ $$R_2(\delta)=\begin{pmatrix}\cos\delta&0&-\sin\delta\\0&1&0\\\sin\delta&0&\cos\
 
 Transformation of coordinates:
 $$\left.\begin{pmatrix}x_{up}\\x_{east}\\x_{north}\end{pmatrix}=R_2(-\varphi^0)R_3(\lambda^0)\left(\begin{pmatrix}x_1\\x_2\\x_3\end{pmatrix}\right.-\begin{pmatrix}x_1^0\\x_2^0\\x_3^0\end{pmatrix}\right)$$
+
 $x^0$are the stations' geodetic coordinates, and $x$ is observations in file '.xyz'.
 Notice that we also can directly use the longitude and latitude of stations provided in the file "Discontinuities\_CONFIRMED.snx".
 
@@ -146,35 +161,37 @@ $$\underline{v}=\underline{\Omega}\times\underline{x}_0=\begin{pmatrix}0&&-\Omeg
 Through the least square adjustment, out group get the time series of these three stations as shown below:
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=10cm]{../source/ITRF2008.png}
+  \includegraphics[width=9cm]{../result/KIRU/KIRU_1.jpg}
   \captionsetup{skip=0.2cm}
-  \caption{Time Series of KIRU}
+  \caption{Time Series of KIRU/(meter)}
   \label{fig:Ori_KIRU}
 \end{figure}
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=10cm]{../source/ITRF2008.png}
-  \caption{Time Series of MORP}
+  \includegraphics[width=9cm]{../result/MORP/MORP_1.jpg}
+  \caption{Time Series of MORP(meter)}
   \label{fig:Ori_MORP}
 \end{figure}
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=10cm]{../source/ITRF2008.png}
-  \caption{Time Series of REYK}
+  \includegraphics[width=9cm]{../source/ITRF2008.png}
+  \caption{Time Series of REYK(meter)}
   \label{fig:Ori_REYK}
 \end{figure}
 
-And we can see that the linear trend (millimeter) of KIRU in Up, East and North directions are , , and respectively.
-\begin{table}[htbp]
+And we can see that the linear trend (millimeter per year) of KIRU in Up, East and North directions are 7.3089, 15.5296 and 14.8375 respectively, 
+ that of MORP in Up, East and North directions are 0.4201, 15.5923 and 15.9229 respectively.
+ \vspace{5pt}
+\begin{table}[H]
   \centering
   \caption{Linear Trend of Time Series}
     \begin{tabular}{lrrr}
     \large Station & \multicolumn{3}{c}{\large Linear Trend(mm/y)} \\
     \midrule
-          & \multicolumn{1}{l}{\large UP} & \multicolumn{1}{l}{\large EAST} & \multicolumn{1}{l}{\large NORTH} \\
+          & \multicolumn{1}{l}{\large UP} & \multicolumn{1}{l}{\large EAST} & \multicolumn{1}{l}{\large NORTH} \\ [5pt]
           
-     KIRU  &       &       &  \\[3pt]
-     MORP  &       &       &  \\[3pt]
+     KIRU  &7.3089&15.5296&14.8375\\[3pt]
+     MORP  &0.4201&15.5923&15.9229\\ [3pt]
      REYK  &       &       &  \\
     \end{tabular}%
   \label{Tab:lin_trend}%
@@ -183,28 +200,26 @@ And we can see that the linear trend (millimeter) of KIRU in Up, East and North 
 After we minus the linear trend, out group get the residual time series of these three stations as below 
 and the specific vaules are shown in the table 1. 
 At the same time, table 2 shows the total amplitude of non-linear trend (millimeter per year) which can be computed by $\sqrt{\beta_3^2+\beta_4^2}$.
-\vspace{30pt}
-
 
 When we removing the linear trend, our group also remove the constant term in the model($\beta_1 + \beta_2 t$), 
 so that we can see more clearly about the residaul values.
 After doing this, we can see residual value in millimeter in three directions of three stations.
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
-  \includegraphics[height=7cm]{../source/nuvel.png}
+  \includegraphics[width=9cm]{../result/KIRU/KIRU_2.jpg}
   \captionsetup{skip=0.2cm}
   \caption{Residual Time Series of KIRU}
   \label{fig:Res_KIRU}
 \end{figure}
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
-  \includegraphics[height=7cm]{../source/nuvel.png}
+  \includegraphics[width=9cm]{../result/MORP/MORP_2.jpg}
   \caption{Residual Time Series of MORP}
   \label{fig:Res_MORP}
 \end{figure}
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
-  \includegraphics[height=7cm]{../source/nuvel.png}
+  \includegraphics[width=9cm]{../source/nuvel.png}
   \caption{Residual Time Series of REYK}
   \label{fig:Res_REYK}
 \end{figure}
@@ -216,19 +231,26 @@ And obvisously, the residual values of UP direction are much larger than the oth
 Through the NUVEL 1A model, we can get the velocity of three stations, for this model only consider the horizontal movements,
 so our group only compare the velocity in East and North directions. And the comparison is shown below:
 % three stations each has two subfigures, one global and one local
-\begin{figure}[htbp]
+\begin{figure}
   \centering
-  \includegraphics[height=7cm]{../source/nuvel.png}
-  \captionsetup{skip=0.2cm}
+  {
+  \includegraphics[width=6cm]{../result/KIRU/KIRU_4.jpg}}
+  \hspace{4pt}    
+  {
+  \includegraphics[width=6cm]{../result/KIRU/KIRU_4(zoom_up).jpg}}
   \caption{Velocity of KIRU}
   \label{fig:Vel_KIRU}
-\end{figure}
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[height=7cm]{../source/nuvel.png}
-  \caption{Velocity of MORP}
-  \label{fig:Vel_MORP}
-\end{figure}
+  \end{figure}
+  \begin{figure}
+    \centering
+    {
+    \includegraphics[width=6cm]{../result/MORP/MORP_4.jpg}}
+    \hspace{4pt}    
+    {
+    \includegraphics[width=6cm]{../result/MORP/MORP_4(zoom_up).jpg}}
+    \caption{Velocity of MORP}
+    \label{fig:Vel_MORP}
+    \end{figure}
 \begin{figure}[htbp]
   \centering
   \includegraphics[height=7cm]{../source/nuvel.png}
