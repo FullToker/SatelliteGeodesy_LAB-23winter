@@ -14,6 +14,7 @@
 \usepackage{float}
 \usepackage{array}
 
+
 \backgroundsetup{
   scale=1,
   angle=0,
@@ -63,7 +64,7 @@ In the file "ITRF2008\_GNSS.SSC.txt", we can find the coordinates of different s
     \caption{ITRF2008\_GNSS.ssc.txt Description}
     \label{fig:ITRF2008}
 \end{figure}
-\subsection{Station GPS Obversations}
+\subsection{GNSS Observation}
 We were responsible for the computation of the positions and movements of three measurement stations: KIRU, MORP, and REYK. The locations are illustrated in the following figure:
 
 An example of the observation file for each data set is provided below, including two time formats and XYZ coordinates.
@@ -105,6 +106,7 @@ and in that row, the angular velocity changes in three directions are provided (
 \end{itemize}
 
 \subsection{Matlab Code}
+The processing program is named based on IGS station names. Functions include reading the files mentioned upper, calculating parameters, and visualizing the results.
 \begin{itemize}
   \item KIRU.m
   \item MORP.m

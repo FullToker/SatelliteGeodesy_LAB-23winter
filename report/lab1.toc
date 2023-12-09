@@ -12,4 +12,4 @@
 \contentsline {section}{\numberline {4}Results and Analysis}{6}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Time Series, Linear Trend and Residuals}{6}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Comparison with the Plate Tectonics Model}{12}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Comparison of vertical movements}{13}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.3}Comparison of vertical movements}{14}{subsection.4.3}%
