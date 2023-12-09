@@ -12,6 +12,7 @@
 \usepackage{bookmark}
 \usepackage[left=25mm, right=25mm, bottom=35mm]{geometry}
 \usepackage{float}
+\usepackage{array}
 
 \backgroundsetup{
   scale=1,
@@ -302,21 +303,71 @@ And we give the specific values of horizontal velocity(in the East and North axi
     \midrule
           & \multicolumn{2}{c}{GNSS Observation} & \multicolumn{2}{c}{NUVEL-1A Model} \\[3pt]
           & EAST  & \multicolumn{1}{c}{NORTH} & EAST  &  NORTH \\[4pt]
-    \large KIRU  &       &       &       &  \\[4pt]
-    \large MORP  &       &       &       &  \\[4pt]
-    \large REYK  & -0.0102 & 0.0198 &  0.00878 & 0.01646 \\
+    \large KIRU  & 0.0157 & 0.0145 & 0.0180 & 0.0120 \\[4pt]
+    \large MORP  &  0.0156 & 0.0159 &  0.0162 & 0.0154 \\[4pt]
+    \large REYK  & -0.0104 & 0.0198 &  0.00878 & 0.01646 \\
     \end{tabular}%
-  \label{tab:addlabel}%
+  \label{tab:Hori_vel}%
 \end{table}%
 
 For the reason that horizontal movements from GNSS observations don't fit that from the NUVEL-1A model well,
 our group think ...
 
 
-
-
 \subsection{Comparison of vertical movements}
+In this part, we compare the vertical movements of three stations from GNSS observations and GIA model: ICE-4G and ICE-5G.
+The visualization of these two models of a global map is here:
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=11cm]{../result/re_figure/fig_kiru/1.jpg}
+  \captionsetup{skip=0.2cm}
+  \caption{GIA Model}
+  \label{fig:GIA_global}
+\end{figure}
 
+At the same time, out group interpolate the vertical movements rates to the position of three stations, and the results are shown below:
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=9cm]{../result/ice/KIRU.png}
+  \captionsetup{skip=0.2cm}
+  \caption{GIA Model Interpolation at KIRU}
+  \label{fig:GIA_KIRU}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=9cm]{../result/ice/MORP.png}
+  \captionsetup{skip=0.2cm}
+  \caption{GIA Model Interpolation at MORP}
+  \label{fig:GIA_MORP}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=9cm]{../result/ice/REYK.png}
+  \captionsetup{skip=0.2cm}
+  \caption{GIA Model Interpolation at REYK}
+  \label{fig:GIA_REYK}
+\end{figure}
+
+The following table shows the specific values:
+\vspace{5pt}
+\begin{table}[htbp]
+  \centering
+  \caption{Vertical Movements Rates}
+  \captionsetup{skip=0.2cm}
+    \begin{tabular}{@{}cc@{\hspace{1.5cm}}cc@{}cc@{}}
+      \midrule
+    \large Station & \multicolumn{3}{c}{\large Vertical Movements Rates at IGS stations/(mm/y)} \\
+    \midrule
+          & \multicolumn{1}{c}{\large GNSS}& \large ICE-4G & \large ICE-5G \\ [4pt]
+    \large KIRU  & \hspace{1.5cm} 1.111 & 1.111 & 1.111 \\ [4pt]
+    \large MORP  & \hspace{1.5cm} 0.4115 & 0.0140 & -0.0408 \\[4pt]
+    \large REYK  & \hspace{1.5cm} 0.7212 & -0.0464 & 0.7236 \\
+    \end{tabular}
+  \label{tab:vert_vel}%
+\end{table}%
+\vspace{5pt}
+
+So we can see that
 
 
 \section{Conclusion}
