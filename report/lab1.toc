@@ -1,12 +1,12 @@
 \contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
 \contentsline {section}{\numberline {2}Data Description}{1}{section.2}%
 \contentsline {subsection}{\numberline {2.1}ITRF2008 IGS station}{1}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Station GPS Obversations}{3}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.2}GNSS Observations}{3}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}NUVEL 1A Model}{3}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}Other data}{4}{subsection.2.4}%
 \contentsline {subsection}{\numberline {2.5}Matlab Code}{4}{subsection.2.5}%
 \contentsline {section}{\numberline {3}Methodology}{4}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Transoformation to LHS}{4}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.1}Transformation to LHS}{4}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Least Square Adjustment for Parameters Estimation}{5}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Model of Plate Tectonics}{6}{subsection.3.3}%
 \contentsline {section}{\numberline {4}Results and Analysis}{6}{section.4}%

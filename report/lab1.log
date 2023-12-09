@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.12.4)  9 DEC 2023 22:36
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.12.4)  9 DEC 2023 23:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -737,18 +737,17 @@ File: ../source/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
  [15]
 File: ../source/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
 <use ../source/Universitaet_Logo_RGB.pdf>
- [16] (./lab1.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+ [16]
+File: ../source/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
+<use ../source/Universitaet_Logo_RGB.pdf>
+ [17] (./lab1.aux) ) 
 Here is how much of TeX's memory you used:
- 22939 strings out of 476683
- 433014 string characters out of 5804047
+ 22948 strings out of 476683
+ 433099 string characters out of 5804047
  1861018 words of memory out of 5000000
- 42767 multiletter control sequences out of 15000+600000
+ 42776 multiletter control sequences out of 15000+600000
  519047 words of font info for 66 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 99i,13n,117p,468b,757s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,13n,117p,468b,844s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on lab1.pdf (16 pages).
+Output written on lab1.pdf (17 pages).

@@ -64,7 +64,7 @@ In the file "ITRF2008\_GNSS.SSC.txt", we can find the coordinates of different s
     \caption{ITRF2008\_GNSS.ssc.txt Description}
     \label{fig:ITRF2008}
 \end{figure}
-\subsection{GNSS Observation}
+\subsection{GNSS Observations}
 We were responsible for the computation of the positions and movements of three measurement stations: KIRU, MORP, and REYK. The locations are illustrated in the following figure:
 
 An example of the observation file for each data set is provided below, including two time formats and XYZ coordinates.
@@ -93,8 +93,9 @@ The file contains the following data, where the leftmost column represents the s
 and in that row, the angular velocity changes in three directions are provided (unit: radians per million years or $rad/My$).
 \begin{figure}[H]
     \centering
-    \includegraphics[width=9cm]{../source/nuvel.png}
+    \includegraphics[width=10.3cm]{../source/nuvel.png}
     \caption{NUVEL\_1A.txt Description}
+    \captionsetup{skip=1.5cm}
     \label{fig:Nuvel-1A}
 \end{figure}
 
@@ -115,7 +116,7 @@ The processing program is named based on IGS station names. Functions include re
 
 
 \section{Methodology}
-\subsection{Transoformation to LHS}
+\subsection{Transformation to LHS}
 [Geocentric cartesian coordinate system] is a three-dimensional, earth-centered reference system in which locations are identified by their x, y, and z values. 
 The x-axis is in the equatorial plane and intersects the prime meridian (usually Greenwich). 
 The y-axis is also in the equatorial plane; it lies at right angles to the x-axis and intersects the 90-degree meridian. 
@@ -132,15 +133,15 @@ In this project, we use two angles and the ITRF2008 point positions as the origi
   \label{fig:2lhs}
 \end{figure}
 
-Calculate the angle according to stations' geodetic coordinates:
+Calculate the angle according to stations' geodetic coordinates:\vspace{5pt}
 
 $$\lambda=\arctan\frac{y}{x}$$ 
 $$\varphi=\arctan\frac{2}{\sqrt{x^{2}+y^{2}}}$$
 
-Then we can get the rotation matrix:
+Then we can get the rotation matrix:\vspace{5pt}
 $$R_2(\delta)=\begin{pmatrix}\cos\delta&0&-\sin\delta\\0&1&0\\\sin\delta&0&\cos\delta\end{pmatrix}\quad R_3(\delta)= \begin{pmatrix}\cos\delta&\sin\delta&0\\-\sin\delta&\cos\delta&0\\0&0&1\end{pmatrix}$$
 
-Transformation of coordinates:
+Transformation of coordinates: \vspace{5pt}
 $$\left.\begin{pmatrix}x_{up}\\x_{east}\\x_{north}\end{pmatrix}=R_2(-\varphi^0)R_3(\lambda^0)\left(\begin{pmatrix}x_1\\x_2\\x_3\end{pmatrix}\right.-\begin{pmatrix}x_1^0\\x_2^0\\x_3^0\end{pmatrix}\right)$$
 
 $x^0$are the stations' geodetic coordinates, and $x$ is observations in file '.xyz'.
@@ -148,20 +149,26 @@ Notice that we also can directly use the longitude and latitude of stations prov
 
 In terms of velocity, its transformation into LHS only requires multiplication by a rotation matrix.
 \subsection{Least Square Adjustment for Parameters Estimation}
-For time series, $$ y(t)=\beta_{1}+\beta_{2}t+\beta_{3}\mathrm{cos}\omega t+\beta_{4}\mathrm{sin}\omega t $$
-among which $\beta_3$ and $\beta_4$ are total amplitude of annual, and $\beta_2$ is linear trend; so we can build model like:
+For time series,\vspace{4pt} $$ y(t)=\beta_{1}+\beta_{2}t+\beta_{3}\mathrm{cos}\omega t+\beta_{4}\mathrm{sin}\omega t $$
+among which $\beta_3$ and $\beta_4$ are total amplitude of annual, and $\beta_2$ is linear trend; so we can build model like: \vspace{6pt}
 $$\begin{pmatrix}y(t_1)\\\vdots\\y(t_n)\end{pmatrix}=\begin{pmatrix}1&t_1&\cos\omega t_1&\sin\omega t_1\\\vdots&\vdots&\vdots&\vdots\\1&t_n&\cos\omega t_n&\sin\omega t_n\end{pmatrix}\begin{pmatrix}\beta_1\\\beta_2\\\beta_3\\\beta_4\end{pmatrix}$$
-We can simppfit the model like: $$Y=X\beta+\varepsilon$$
+\vspace{4pt}
+We can simppfit the model like:
+\vspace{4pt} $$Y=X\beta+\varepsilon$$
 where $Y$ is the observations, $X$ is the design matrix, $\beta$ is the parameters, and $\varepsilon$ is the noise.
 
 According to least square, minimize the noise, 
 derivative the square of noise and set it to zero so we get:
+\vspace{6pt}
 $$\beta=(X^TX)^{-1}X^TY$$ through this we can get the estimated parameters.
 
 \subsection{Model of Plate Tectonics}
 The movement of any plate on a spherical Earth can be described through a rotation around the Euler pole:
+\vspace{5pt}
 $$\underline{\Omega}=(\Omega_{1},\Omega_{2},\Omega_{3})^{T}$$
+\vspace{5pt}
 In point $\underline{x}_{0}=(x,y,z)^{T}$ the velocity vector v is obtained by:
+\vspace{4pt}
 $$\underline{v}=\underline{\Omega}\times\underline{x}_0=\begin{pmatrix}0&&-\Omega_z&&\Omega_y\\\Omega_z&&0&&-\Omega_x\\-\Omega_y&&\Omega_x&&0\end{pmatrix}\begin{pmatrix}x\\y\\z\end{pmatrix}$$
 
 
@@ -432,5 +439,15 @@ which is limited by the Earth's obstruction.
 Therefore, the control in the up direction is weaker compared to the other two directions, 
 and there will certainly be some deviation.
 
+\begin{thebibliography}{99}
+  \bibitem{ref1}ITRF2008 Homepage, https://itrf.ign.fr/en/solutions/ITRF2008
+  \bibitem{ref2}Summary report for IGS submission to ITRF2008, https://itrf.ign.fr/docs/solutions/itrf2008/ IGSsubmission4ITRF2008.txt
+  \bibitem{ref3}Charles DeMets, Richard G. Gordon, Donald F. Argus, Geologically current plate motions, Geophysical Journal International, Volume 181, Issue 1, April 2010, Pages 1-80, https://doi.org/10.1111/j.1365-246X.2009.04491.x
+  \bibitem{ref4}Peltier, W.. Global glacial isostatic adjustment and the surface of the ice-age Earth: the ICE5G (VM2) model and GRACE. 
+  \bibitem{ref5}International GNSS Service
+  Data Reprocessing Campaign, http://acc.igs.org/reprocess.html
+  \bibitem{ref6}Collilieux, X., Z. Altamimi, D. Coulot, J. Ray and P. Sillard (2007) Comparison of very long baseline interferometry, GPS, and satellite laser ranging height residuals from ITRF2005 using spectral and correlation methods, Journal of Geophysical Research, 112(B12403).
+  \bibitem{ref7}McCarthy, D. D., “IERS Conventions (1996).”, <i>IERS Technical Note</i>, vol. 21, pp. 1-95, 1996.
+\end{thebibliography}
 
 \end{document}
