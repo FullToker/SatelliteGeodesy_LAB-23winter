@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.12.4)  9 DEC 2023 23:03
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.12.4)  9 DEC 2023 23:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -640,18 +640,18 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 File: ../result/point/Point.jpg Graphic file (type bmp)
 <../result/point/Point.jpg>
-File: ./source/ITRF2008.png Graphic file (type bmp)
-<./source/ITRF2008.png>
 File: ../source/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
 <use ../source/Universitaet_Logo_RGB.pdf>
  [1
 
 ]
+File: ./source/ITRF2008.png Graphic file (type bmp)
+<./source/ITRF2008.png>
+File: ./source/xyz.png Graphic file (type bmp)
+<./source/xyz.png>
 File: ../source/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
 <use ../source/Universitaet_Logo_RGB.pdf>
  [2]
-File: ./source/xyz.png Graphic file (type bmp)
-<./source/xyz.png>
 File: ../source/dis.png Graphic file (type bmp)
 <../source/dis.png>
 File: ../source/nuvel.png Graphic file (type bmp)
@@ -744,7 +744,7 @@ File: ../source/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
 Here is how much of TeX's memory you used:
  22948 strings out of 476683
  433099 string characters out of 5804047
- 1861018 words of memory out of 5000000
+ 1857018 words of memory out of 5000000
  42776 multiletter control sequences out of 15000+600000
  519047 words of font info for 66 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
