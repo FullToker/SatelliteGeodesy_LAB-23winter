@@ -161,20 +161,20 @@ $$\underline{v}=\underline{\Omega}\times\underline{x}_0=\begin{pmatrix}0&&-\Omeg
 Through the least square adjustment, out group get the time series of these three stations as shown below:
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=11cm]{../result/KIRU/KIRU_1.jpg}
+  \includegraphics[width=11cm]{../result/re_figure/fig_kiru/5.jpg}
   \captionsetup{skip=0.2cm}
   \caption{Time Series of KIRU/(meter)}
   \label{fig:Ori_KIRU}
 \end{figure}
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=11cm]{../result/MORP/MORP_1.jpg}
+  \includegraphics[width=11cm]{../result/re_figure/fig_MORP/5.jpg}
   \caption{Time Series of MORP(meter)}
   \label{fig:Ori_MORP}
 \end{figure}
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=11cm]{../source/ITRF2008.png}
+  \includegraphics[width=11cm]{../result/re_figure/fig_REYK/figure1.jpg}
   \caption{Time Series of REYK(meter)}
   \label{fig:Ori_REYK}
 \end{figure}
@@ -189,11 +189,11 @@ And we can see that the linear trend (millimeter per year) of KIRU in Up, East a
     \begin{tabular}{lrrr}
     \large Station & \multicolumn{3}{c}{\large Linear Trend(mm/y)} \\
     \midrule
-          & \multicolumn{1}{l}{\large UP} & \multicolumn{1}{l}{\large EAST} & \multicolumn{1}{l}{\large NORTH} \\ [5pt]
+          &\multicolumn{1}{l}{\large UP} & \multicolumn{1}{l}{\large EAST} & \multicolumn{1}{l}{\large NORTH} \\ [5pt]
           
-     KIRU  &7.3089&15.5296&14.8375\\[3pt]
-     MORP  &0.4201&15.5923&15.9229\\ [3pt]
-     REYK  &       &       &  \\
+     KIRU&7.3089 & 15.5296 & 14.8375\\[3pt]
+     MORP&0.4201 & 15.5923 & 15.9229\\ [3pt]
+     REYK&-2.0306 & -10.9442 & 20.6032\\
     \end{tabular}%
   \label{Tab:lin_trend}%
 \end{table}
@@ -207,29 +207,51 @@ so that we can see more clearly about the residaul values.
 After doing this, we can see residual value in millimeter in three directions of three stations.
 \begin{figure}[H]
   \centering
-  \includegraphics[width=11cm]{../result/KIRU/KIRU_2.jpg}
+  \includegraphics[width=11cm]{../result/re_figure/fig_kiru/4.jpg}
   \captionsetup{skip=0.2cm}
   \caption{Residual Time Series of KIRU}
   \label{fig:Res_KIRU}
 \end{figure}
 \begin{figure}[H]
   \centering
-  \includegraphics[width=11cm]{../result/MORP/MORP_2.jpg}
+  \includegraphics[width=11cm]{../result/re_figure/fig_MORP/4.jpg}
   \caption{Residual Time Series of MORP}
   \label{fig:Res_MORP}
 \end{figure}
 \begin{figure}[H]
   \centering
-  \includegraphics[width=11cm]{../source/nuvel.png}
+  \includegraphics[width=11cm]{../result/re_figure/fig_REYK/figure2.jpg}
   \caption{Residual Time Series of REYK}
   \label{fig:Res_REYK}
+\end{figure}
+
+Due to the discontinuities in the observations, our group using the differnet reference coordinates in time series given by the file "Discontinuities\_CONFIRMED.snx". 
+After separat modeling of different parts of time seies, we can get the residual time series of these three stations as below, where we use different colors to represent different parts:
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=11cm]{../result/re_figure/fig_kiru/3.jpg}
+  \captionsetup{skip=0.2cm}
+  \caption{Modified Residual Time Series of KIRU}
+  \label{fig:nRes_KIRU}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=11cm]{../result/re_figure/fig_MORP/3.jpg}
+  \caption{Modified Residual Time Series of MORP}
+  \label{fig:nRes_MORP}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=11cm]{../result/re_figure/fig_REYK/figure3.jpg}
+  \caption{Modified Residual Time Series of REYK}
+  \label{fig:nRes_REYK}
 \end{figure}
 
 Obvisously, the residual values of UP direction are much larger than the other two directions, which also are predominant in total residual values.
 
 Meanwhile, our group also found some anomalies in the residual time series. Firsyly, we find there is an annual signal in the all time series, 
-these signals' amplitude are much large for KIRU, but not very obvisous in MORP.
-Plus, there are some sudden changes, like the one in 1997 of MORP, and the one in 2000 of KIRU. 
+these signals' amplitude are much large for KIRU, but are small(1-2 millimeter) in MORP and REYK.
+Plus, there are some sudden changes, like the one in 1997 of MORP, the one in 2000 of KIRU and ones in 2000 and 2008 of REYK.
 We supposed that these changes are caused by the discontinuities in the observations and recording errors or instrument malfunction.
 
 Additionally, we also find that the residual time series of MORP are much more stable than the other two stations, 
@@ -275,10 +297,10 @@ And we give the specific values of horizontal velocity(in the East and North axi
     \large Station & \multicolumn{4}{c}{\large Horizontal Velocity/(m/y)} \\[5pt]
     \midrule
           & \multicolumn{2}{c}{GNSS Observation} & \multicolumn{2}{c}{NUVEL-1A Model} \\[3pt]
-          & EAST  & \multicolumn{1}{c}{NORTH} & EAST  & NORTH \\[4pt]
+          & EAST  & \multicolumn{1}{c}{NORTH} & EAST  &  NORTH \\[4pt]
     \large KIRU  &       &       &       &  \\[4pt]
     \large MORP  &       &       &       &  \\[4pt]
-    \large REYK  &       &       &       &  \\
+    \large REYK  & -0.0102 & 0.0198 &  0.00878 & 0.01646 \\
     \end{tabular}%
   \label{tab:addlabel}%
 \end{table}%

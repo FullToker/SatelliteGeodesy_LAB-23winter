@@ -12,6 +12,6 @@
 \contentsline {subsection}{\numberline {3.4}Program Description}{5}{subsection.3.4}%
 \contentsline {section}{\numberline {4}Results and Analysis}{5}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Time Series, Linear Trend and Residuals}{5}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Comparison with the Plate Tectonics Model}{9}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Comparison of vertical movements}{11}{subsection.4.3}%
-\contentsline {section}{\numberline {5}Conclusion}{11}{section.5}%
+\contentsline {subsection}{\numberline {4.2}Comparison with the Plate Tectonics Model}{11}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Comparison of vertical movements}{12}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Conclusion}{12}{section.5}%
