@@ -27,8 +27,8 @@
   }
 }
 % Title
-\title{Satellite Lab1}
-\author{Group6: Zhengyang Hua, Xipeng Li, Yushuo Feng}
+\title{Satellite Geodesy: Lab1 Report}
+\author{Group 6: Zhengyang Hua, Xipeng Li, Yushuo Feng}
 \date{\today}
 
 
@@ -40,7 +40,7 @@
 \section{Introduction}
 This lab focuses on the geometry and kinematics of the polar region. 
 And our group use the IGS products(station positions) to estimate the time series, horizontal and vertical velocities of three stations: KIRU, MORP, and REYK, whose locations are shown in the following figure:
-In the final part, we compare these result with the plate tectonics model NUVEL 1A and GIA models.
+In the final part, we compare these result with the plate tectonics model NUVEL-1A and GIA models.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=8cm]{../result/point/Point.jpg}
@@ -183,7 +183,7 @@ Through the least square adjustment, out group get the time series of these thre
 And we can see that the linear trend (millimeter per year) of KIRU in Up, East and North directions are 7.3089, 15.5296 and 14.8375 respectively, 
  that of MORP in Up, East and North directions are 0.4201, 15.5923 and 15.9229 respectively,
  and as for REYK, the linear trend in Up, East and North directions are ,  and  respectively.
- \vspace{5pt}
+ \vspace{6pt}
 \begin{table}[H]
   \centering
   \caption{Linear Trend of Time Series}
@@ -197,6 +197,21 @@ And we can see that the linear trend (millimeter per year) of KIRU in Up, East a
      REYK&-2.0306 & -10.9442 & 20.6032\\
     \end{tabular}%
   \label{Tab:lin_trend}%
+\end{table}
+
+\begin{table}[H]
+  \centering
+  \caption{Annual Amplitude}
+    \begin{tabular}{lrrr}
+    \large Station & \multicolumn{3}{c}{\large Annual Amplitude(mm)} \\
+    \midrule
+          &\multicolumn{1}{l}{\large UP} & \multicolumn{1}{l}{\large EAST} & \multicolumn{1}{l}{\large NORTH} \\ [5pt]
+          
+     KIRU&7.3089 & 0.3954 & 0.2587\\[3pt]
+     MORP&3.9678 & 0.6203 & 0.0947\\ [3pt]
+     REYK&3.0366 & 1.6303 & 0.2655\\
+    \end{tabular}%
+  \label{Tab:amplitude}%
 \end{table}
 
 After we minus the linear trend, out group get the residual time series of these three stations as below 
@@ -250,6 +265,11 @@ After separat modeling of different parts of time seies, we can get the residual
 
 Obviously, the residual values of UP direction are much larger than the other two directions, which also are predominant in total residual values.
 Through, we know that GPS residuals on the three components are dominated by flicker noise.
+As for reasons why the amplitudes of UP direction are considerable lareger, 
+We believe this is due to the satellite visibility. 
+Due to the Earth's obstruction, we are unable to receive signals from satellites on the other side of the Earth. 
+In other words, our control of measurements in the up direction is limited to above the horizontal plane, 
+hence the control intensity is certainly lower compared to the other two directions.
 
 Meanwhile, our group also found some anomalies in the residual time series. Firstly, we find there is an annual signal in the all time series, 
 these signals' amplitude are much large for KIRU, but are small(1-2 millimeter) in MORP and REYK. 
@@ -384,14 +404,25 @@ The following table shows the specific values:
     \midrule
           & \multicolumn{1}{c}{\large GNSS}& \large ICE-4G & \large ICE-5G \\ [4pt]
     \large KIRU  & \hspace{1.5cm} 6.8840 & 5.5568 & 6.1335 \\ [4pt]
-    \large MORP  & \hspace{1.5cm} 0.4115 & 0.0140 & -0.0408 \\[4pt]
+    \large MORP  & \hspace{1.5cm} 0.0012 & 0.0140 & -0.0408 \\[4pt]
     \large REYK  & \hspace{1.5cm} 0.7212 & -0.0464 & 0.7236 \\
     \end{tabular}
   \label{tab:vert_vel}%
 \end{table}%
 \vspace{5pt}
 
-So we can see that
+So we can see that, at different stations, the GNSS-obtained data closely align with ICE-5G but still have differences. 
+Meanwhile, ICE-4G data show significant variations with the other two models. 
+Through some materials, it is told that the ICE-4G model is inaccuracy because of incorrect assumptions made during model construction and other factors. 
+On the other hand, ICE-5G is a refined model of the post-LGM global deglaciation process. 
+Therefore, our analysis here focuses more on the differences between GNSS-obtaibed data and the ICE-5G model.
+
+As for reasons, as we have metioned in task 1, the GNSS observations are affected by various factors,
+including multipath effects, ionospheric interference and so on.
+Especially, the vertical movements are more sensitive to the satellite visibility,
+which is limited by the Earth's obstruction. 
+Therefore, the control in the up direction is weaker compared to the other two directions, 
+and there will certainly be some deviation.
 
 
 \end{document}

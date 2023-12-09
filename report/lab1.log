@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.12.4)  9 DEC 2023 19:54
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.12.4)  9 DEC 2023 22:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -678,11 +678,11 @@ File: ../source/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
  [6]
 File: ../result/re_figure/fig_kiru/4.jpg Graphic file (type bmp)
 <../result/re_figure/fig_kiru/4.jpg>
-File: ../result/re_figure/fig_MORP/4.jpg Graphic file (type bmp)
-<../result/re_figure/fig_MORP/4.jpg>
 File: ../source/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
 <use ../source/Universitaet_Logo_RGB.pdf>
  [7]
+File: ../result/re_figure/fig_MORP/4.jpg Graphic file (type bmp)
+<../result/re_figure/fig_MORP/4.jpg>
 File: ../result/re_figure/fig_REYK/figure2.jpg Graphic file (type bmp)
 <../result/re_figure/fig_REYK/figure2.jpg>
 File: ../source/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
@@ -724,11 +724,11 @@ File: ../result/ice/KIRU.png Graphic file (type bmp)
 <../result/ice/KIRU.png>
 File: ../result/ice/MORP.png Graphic file (type bmp)
 <../result/ice/MORP.png>
-File: ../result/ice/REYK.png Graphic file (type bmp)
-<../result/ice/REYK.png>
 File: ../source/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
 <use ../source/Universitaet_Logo_RGB.pdf>
  [13]
+File: ../result/ice/REYK.png Graphic file (type bmp)
+<../result/ice/REYK.png>
 File: ../source/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
 <use ../source/Universitaet_Logo_RGB.pdf>
  [14]
@@ -736,10 +736,10 @@ File: ../source/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
 <use ../source/Universitaet_Logo_RGB.pdf>
  [15] (./lab1.aux) ) 
 Here is how much of TeX's memory you used:
- 22937 strings out of 476683
- 432962 string characters out of 5804047
+ 22938 strings out of 476683
+ 432977 string characters out of 5804047
  1863018 words of memory out of 5000000
- 42765 multiletter control sequences out of 15000+600000
+ 42766 multiletter control sequences out of 15000+600000
  519047 words of font info for 66 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  99i,13n,117p,468b,759s stack positions out of 10000i,1000n,20000p,200000b,200000s
