@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.12.4)  9 DEC 2023 00:32
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.12.4)  9 DEC 2023 01:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -671,11 +671,14 @@ File: ../result/KIRU/KIRU_2.jpg Graphic file (type bmp)
 <../result/KIRU/KIRU_2.jpg>
 File: ../result/MORP/MORP_2.jpg Graphic file (type bmp)
 <../result/MORP/MORP_2.jpg>
+File: ../source/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
+<use ../source/Universitaet_Logo_RGB.pdf>
+ [7]
 File: ../source/nuvel.png Graphic file (type bmp)
 <../source/nuvel.png>
 File: ../source/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
 <use ../source/Universitaet_Logo_RGB.pdf>
- [7]
+ [8]
 File: ../result/KIRU/KIRU_4.jpg Graphic file (type bmp)
 <../result/KIRU/KIRU_4.jpg>
 File: ../result/KIRU/KIRU_4(zoom_up).jpg Graphic file (type bmp)
@@ -684,9 +687,6 @@ File: ../result/MORP/MORP_4.jpg Graphic file (type bmp)
 <../result/MORP/MORP_4.jpg>
 File: ../result/MORP/MORP_4(zoom_up).jpg Graphic file (type bmp)
 <../result/MORP/MORP_4(zoom_up).jpg>
-File: ../source/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
-<use ../source/Universitaet_Logo_RGB.pdf>
- [8]
 File: ../source/nuvel.png Graphic file (type bmp)
 <../source/nuvel.png>
 File: ../source/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
@@ -694,14 +694,17 @@ File: ../source/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
  [9]
 File: ../source/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
 <use ../source/Universitaet_Logo_RGB.pdf>
- [10] (./lab1.aux) ) 
+ [10]
+File: ../source/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
+<use ../source/Universitaet_Logo_RGB.pdf>
+ [11] (./lab1.aux) ) 
 Here is how much of TeX's memory you used:
- 22771 strings out of 476683
- 428244 string characters out of 5804047
- 1862018 words of memory out of 5000000
- 42614 multiletter control sequences out of 15000+600000
+ 22773 strings out of 476683
+ 428287 string characters out of 5804047
+ 1863018 words of memory out of 5000000
+ 42616 multiletter control sequences out of 15000+600000
  519047 words of font info for 66 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 99i,13n,117p,468b,757s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,13n,117p,468b,759s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on lab1.pdf (10 pages).
+Output written on lab1.pdf (11 pages).
