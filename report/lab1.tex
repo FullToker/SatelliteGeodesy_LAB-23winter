@@ -90,7 +90,7 @@ continental movements through a dynamic theory of plaet tectonics.
 The "NNR\_NUVEL1A.txt" gives the rotation referred to epoch $t_0$. 
 The file contains the following data, where the leftmost column represents the station name, 
 and in that row, the angular velocity changes in three directions are provided (unit: radians per million years or $rad/My$).
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
     \includegraphics[width=9cm]{../source/nuvel.png}
     \caption{NUVEL\_1A.txt Description}
@@ -98,12 +98,19 @@ and in that row, the angular velocity changes in three directions are provided (
 \end{figure}
 
 \subsection{Other data}
-\noindent coast30.mat: coast lines for visualization
-
-\noindent crust\_ICE4G.mat, crust\_ICE5G.mat: Global grids with vertical crustal deformations rates [mm/year].
-These matrices are given from $89.5^{\circ}$ to $-89.5^{\circ}$ ellipsoidal latitude and $0.5^{\circ}$ to $359.5^{\circ}$ longitude.
+\begin{itemize}
+  \item coast30.mat: coast lines for visualization
+  \item crust\_ICE4G.mat, crust\_ICE5G.mat: Global grids with vertical crustal deformations rates [mm/year].
+  These matrices are given from $89.5^{\circ}$ to $-89.5^{\circ}$ ellipsoidal latitude and $0.5^{\circ}$ to $359.5^{\circ}$ longitude.
+\end{itemize}
 
 \subsection{Matlab Code}
+\begin{itemize}
+  \item KIRU.m
+  \item MORP.m
+  \item REYK.m
+\end{itemize}
+
 
 \section{Methodology}
 \subsection{Transoformation to LHS}
@@ -155,7 +162,6 @@ $$\underline{\Omega}=(\Omega_{1},\Omega_{2},\Omega_{3})^{T}$$
 In point $\underline{x}_{0}=(x,y,z)^{T}$ the velocity vector v is obtained by:
 $$\underline{v}=\underline{\Omega}\times\underline{x}_0=\begin{pmatrix}0&&-\Omega_z&&\Omega_y\\\Omega_z&&0&&-\Omega_x\\-\Omega_y&&\Omega_x&&0\end{pmatrix}\begin{pmatrix}x\\y\\z\end{pmatrix}$$
 
-\subsection{Program Description}
 
 \section{Results and Analysis}
 \subsection{Time Series, Linear Trend and Residuals}

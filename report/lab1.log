@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.12.4)  9 DEC 2023 22:18
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.12.4)  9 DEC 2023 22:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -647,6 +647,9 @@ File: ../source/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
  [1
 
 ]
+File: ../source/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
+<use ../source/Universitaet_Logo_RGB.pdf>
+ [2]
 File: ./source/xyz.png Graphic file (type bmp)
 <./source/xyz.png>
 File: ../source/dis.png Graphic file (type bmp)
@@ -655,15 +658,15 @@ File: ../source/nuvel.png Graphic file (type bmp)
 <../source/nuvel.png>
 File: ../source/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
 <use ../source/Universitaet_Logo_RGB.pdf>
- [2]
+ [3]
 File: ../source/transform.png Graphic file (type bmp)
 <../source/transform.png>
 File: ../source/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
 <use ../source/Universitaet_Logo_RGB.pdf>
- [3]
+ [4]
 File: ../source/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
 <use ../source/Universitaet_Logo_RGB.pdf>
- [4]
+ [5]
 File: ../result/re_figure/fig_kiru/5.jpg Graphic file (type bmp)
 <../result/re_figure/fig_kiru/5.jpg>
 File: ../result/re_figure/fig_MORP/5.jpg Graphic file (type bmp)
@@ -672,15 +675,12 @@ File: ../result/re_figure/fig_REYK/figure1.jpg Graphic file (type bmp)
 <../result/re_figure/fig_REYK/figure1.jpg>
 File: ../source/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
 <use ../source/Universitaet_Logo_RGB.pdf>
- [5]
-File: ../source/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
-<use ../source/Universitaet_Logo_RGB.pdf>
  [6]
-File: ../result/re_figure/fig_kiru/4.jpg Graphic file (type bmp)
-<../result/re_figure/fig_kiru/4.jpg>
 File: ../source/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
 <use ../source/Universitaet_Logo_RGB.pdf>
  [7]
+File: ../result/re_figure/fig_kiru/4.jpg Graphic file (type bmp)
+<../result/re_figure/fig_kiru/4.jpg>
 File: ../result/re_figure/fig_MORP/4.jpg Graphic file (type bmp)
 <../result/re_figure/fig_MORP/4.jpg>
 File: ../result/re_figure/fig_REYK/figure2.jpg Graphic file (type bmp)
@@ -692,14 +692,17 @@ File: ../result/re_figure/fig_kiru/3.jpg Graphic file (type bmp)
 <../result/re_figure/fig_kiru/3.jpg>
 File: ../result/re_figure/fig_MORP/3.jpg Graphic file (type bmp)
 <../result/re_figure/fig_MORP/3.jpg>
+File: ../source/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
+<use ../source/Universitaet_Logo_RGB.pdf>
+ [9]
 File: ../result/re_figure/fig_REYK/figure3.jpg Graphic file (type bmp)
 <../result/re_figure/fig_REYK/figure3.jpg>
 File: ../source/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
 <use ../source/Universitaet_Logo_RGB.pdf>
- [9]
+ [10]
 File: ../source/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
 <use ../source/Universitaet_Logo_RGB.pdf>
- [10]
+ [11]
 File: ../result/KIRU/KIRU_4.jpg Graphic file (type bmp)
 <../result/KIRU/KIRU_4.jpg>
 File: ../result/KIRU/KIRU_4(zoom_up).jpg Graphic file (type bmp)
@@ -714,19 +717,16 @@ File: ../result/re_figure/fig_REYK/截屏/figure4(zoomup).jpg Graphic file (type
 <../result/re_figure/fig_REYK/截屏/figure4(zoomup).jpg>
 File: ../source/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
 <use ../source/Universitaet_Logo_RGB.pdf>
- [11]
+ [12]
 File: ../result/re_figure/fig_kiru/1.jpg Graphic file (type bmp)
 <../result/re_figure/fig_kiru/1.jpg>
-File: ../source/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
-<use ../source/Universitaet_Logo_RGB.pdf>
- [12]
 File: ../result/ice/KIRU.png Graphic file (type bmp)
 <../result/ice/KIRU.png>
-File: ../result/ice/MORP.png Graphic file (type bmp)
-<../result/ice/MORP.png>
 File: ../source/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
 <use ../source/Universitaet_Logo_RGB.pdf>
  [13]
+File: ../result/ice/MORP.png Graphic file (type bmp)
+<../result/ice/MORP.png>
 File: ../result/ice/REYK.png Graphic file (type bmp)
 <../result/ice/REYK.png>
 File: ../source/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
@@ -736,10 +736,10 @@ File: ../source/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
 <use ../source/Universitaet_Logo_RGB.pdf>
  [15] (./lab1.aux) ) 
 Here is how much of TeX's memory you used:
- 22938 strings out of 476683
- 432977 string characters out of 5804047
- 1863018 words of memory out of 5000000
- 42766 multiletter control sequences out of 15000+600000
+ 22937 strings out of 476683
+ 432971 string characters out of 5804047
+ 1861018 words of memory out of 5000000
+ 42765 multiletter control sequences out of 15000+600000
  519047 words of font info for 66 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  99i,13n,117p,468b,759s stack positions out of 10000i,1000n,20000p,200000b,200000s
