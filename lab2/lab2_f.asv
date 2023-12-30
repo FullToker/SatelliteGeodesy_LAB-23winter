@@ -1,0 +1,46 @@
+clear all
+clc
+
+load ./data/lab2_data.mat
+
+aohi_ewh=aohi_ewh; %mm
+aohi_def=aohi_def *1000; % mm
+
+lat=size(aohi_ewh,1);
+long=size(aohi_ewh,2);
+
+%%% task1
+%ewh linear
+para_ewh=zeros(lat,long,4);
+for lam=1:lat
+    for phi=1:long
+        data=squeeze(aohi_ewh(lam,phi,:));
+        A=[ones(size(t)), t/365,cos(2*pi*t/365), sin(2*pi*t/365)];
+        para_ewh(lam, phi, :)=(A' * A)\(A'*data);
+    end
+end
+
+linear_ewh=para_ewh(:, :, 2);
+annual_ewh=sqrt(para_ewh(:, :, 3).^2 + para_ewh(:, :, 4).^2);
+
+%def linear
+para_def=zeros(lat,long,4);
+for lam=1:lat
+    for phi=1:long
+        data=squeeze(aohi_def(lam,phi, : ));
+        A=[ones(size(t)), t/365,cos(2*pi*t/365), sin(2*pi*t/365)];
+        para_def(lam, phi, :)=(A' * A)\(A'*data);
+    end
+end
+
+linear_def=para_def(:, :, 2);
+annual_def=sqrt(para_def(:, :, 3).^2 + para_def(:, :, 4).^2);
+
+%%% figure
+load ./data/coast30.mat
+
+%aohi_ewh
+figure
+hold on
+imagesc(0.5:)
+
