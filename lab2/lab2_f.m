@@ -15,7 +15,7 @@ para_ewh=zeros(lat,long,4);
 for lam=1:lat
     for phi=1:long
         data=squeeze(aohi_ewh(lam,phi,:));
-        A=[ones(size(t)), t/365,cos(2*pi*t/365), sin(2*pi*t/365)];
+        A=[ones(size(t)), t/365,cos(2 * pi * t/365), sin(2 * pi * t/365)];
         para_ewh(lam, phi, :)=(A' * A)\(A'*data);
     end
 end
@@ -47,8 +47,8 @@ colormap 'jet'
 colorbar
 plot(lam,phi,'k')
 title 'Linear trend of global surface densities (mm ewh/year)'
-xlabel 'Longitude'
-ylabel 'Latitude'
+xlabel 'Longitude(°)'
+ylabel 'Latitude(°)'
 axis equal
 axis tight
 
