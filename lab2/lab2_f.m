@@ -107,7 +107,9 @@ ref_reyk=[2587384.328,-1043033.510,5716564.045];
 % kiru =[up_linear, up_anaual, up_ice4, up_ice5] unit: mm/y, mm, mm/y mm/y
 up_kiru=[7.3089, 5.1123, 5.5568, 6.1335]; 
 up_morp=[0.4201, 3.9678, 0.0140, -0.0408]; 
-up_reyk=[1.2973,4.1558, -0.0464, 0.7236];
+%up_reyk=[1.2973,4.1558, -0.0464, 0.7236];
+up_reyk=[1.2762,4.1558, -0.0464, 0.7236];
+
 % linear and annual def_ref
 def_kiru_rate=lin_ann_def(def_kiru, t);
 def_morp_rate=lin_ann_def(def_morp, t);
