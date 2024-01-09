@@ -24,8 +24,8 @@ end
 %compute the linear trend and amplitude of annual signal
 ref_epoch=[1858,11,17,00,00,01];
 t2=decyear(data(:,2) + datenum(ref_epoch));
-data_uen=data_uen(t2>2003 & t2<2007, :);
-t2=t2(t2>2003 & t2<2007);
+data_uen=data_uen(t2>2003.5 & t2<2007, :);
+t2=t2(t2>2003.5 & t2<2007);
 
 A=[ones(size(t2)),t2,cos(2*pi * t2), sin(2*pi * t2)];
 para_u=(A' * A)\(A' *  data_uen(:,1));
@@ -33,7 +33,7 @@ up_linear_reyk=para_u(2);
 up_annual_reyk= sqrt(para_u(3)^2 + para_u(4)^2);
 
 %%%AOHI + GIA vs GNSS
-offset=0;
+offset=-25;
 figure
 hold on
 plot(t2, data_uen(:,1));
